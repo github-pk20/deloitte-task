@@ -12,6 +12,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AccordionModule } from 'ngx-bootstrap/accordion';
 import { RatingModule } from 'ngx-bootstrap/rating';
 import { Ng5SliderModule } from 'ng5-slider';
+import { PaginationModule } from 'ngx-bootstrap/pagination';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { Ng5SliderModule } from 'ng5-slider';
     BrowserAnimationsModule,
     AccordionModule.forRoot(),
     RatingModule.forRoot(),
-    Ng5SliderModule
+    Ng5SliderModule,
+    PaginationModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]

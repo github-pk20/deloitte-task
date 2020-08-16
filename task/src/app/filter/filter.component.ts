@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Options } from 'ng5-slider';
+import { Options, LabelType } from 'ng5-slider';
 
 @Component({
   selector: 'app-filter',
@@ -8,10 +8,14 @@ import { Options } from 'ng5-slider';
 })
 export class FilterComponent implements OnInit {
 
-  value: number = 100;
+  minValue: number = 100;
+  maxValue: number = 300;
   options: Options = {
     floor: 0,
-    ceil: 200
+    ceil: 500,
+    translate: (value: number, label: LabelType): string => {
+          return '$' + value;
+    }
   };
 
   constructor() { }

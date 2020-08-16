@@ -1,15 +1,28 @@
+<h6 class="text-muted font-weight-normal">FILTER BY</h6>
 <accordion [isAnimated]="true">
-  <accordion-group heading="Static Header">
-    This content is straight in the template.
+  <accordion-group>
+    <button class="btn btn-block clearfix p-0" accordion-heading type="button">
+      <div class="pull-left float-left">Collection</div>
+      <i class="fa fa-angle-down float-right pull-right mt-1" aria-hidden="true"></i>
+    </button>
+    Content
   </accordion-group>
-  <accordion-group heading="Another group">
-    <p>Some content</p>
+  <accordion-group>
+    <button class="btn btn-block clearfix p-0" accordion-heading type="button">
+      <div class="pull-left float-left">Color</div>
+      <i class="fa fa-angle-down float-right pull-right mt-1" aria-hidden="true"></i>
+    </button>
+    Content
   </accordion-group>
-  <accordion-group heading="Another group">
-    <p>Some content</p>
-  </accordion-group>
-  <accordion-group heading="Another group">
-    <p>Some content</p>
+  <accordion-group>
+    <button class="btn btn-block clearfix p-0" accordion-heading type="button">
+      <div class="pull-left float-left">Category</div>
+      <i class="fa fa-angle-down float-right pull-right mt-1" aria-hidden="true"></i>
+    </button>
+    Content
   </accordion-group>
 </accordion>
-<ng5-slider [(value)]="value" [options]="options"></ng5-slider>
+<div class="border border-top-0 rounded bg-light px-4 py-3">
+	<div class="pull-left float-left pb-3">Price Range</div>
+	<ng5-slider [(value)]="minValue" [(highValue)]="maxValue" [options]="options"></ng5-slider>
+</div>

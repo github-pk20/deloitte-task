@@ -1,0 +1,17 @@
+::ng-deep {
+
+    .pagination {
+	    .page-link{
+	        color: #000 !important;
+	      }
+	      .page-item.active .page-link {
+	      	background: #000 !important;
+	      	color: #fff !important;
+	      	border: none !important;
+	      }
+	      .page-item.disabled .page-link {
+	        color: #6c757d !important;
+	      }
+    }
+  
+}

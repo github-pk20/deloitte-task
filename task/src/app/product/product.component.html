@@ -1,20 +1,21 @@
-<div class="row">
-	<div class="col-sm-4" *ngFor="let product of productDetails" >
-		<div class="card">
-		  <div class="card-body">
+<div class="row m-0 mb-4">
+	<div class="col-sm-4 mb-4" *ngFor="let product of productPerPage" >
+		<div class="card border-0">
+		  <div class="card-body p-0">
 		  	<div (click) = "emitProductDetail(product)">
-			 <img [src]="product.imageUrl" width="100%" height="273">
-			 <p>{{product.name}}</p>
-			 <div class="row justify-content-between">
-				 <p>{{product.category}}</p>
+			 <img [src]="product.imageUrl" width="100%" height="273" class="mw-100">
+			 <h5>{{product.name}}</h5>
+			 <div class="row justify-content-between m-0">
+				 <h6 class="font-weight-normal text-muted">{{product.category}}</h6>
 				 <p>{{product.price}}</p>
 			 </div>
 			</div>
-			 <div class="row justify-content-between">
+			 <div class="row justify-content-between m-0">
 			 	<rating></rating>
-			 	<i class="fa fa-cart-arrow-down" aria-hidden="true"></i>
+			 	<i class="fa fa-cart-arrow-down" aria-hidden="true" title="Add to cart"></i>
 			 </div>
 		  </div>
 		</div>
 	</div>
 </div>
+<pagination [totalItems]="totalItems" [itemsPerPage] = "6" (pageChanged)="pageChanged($event)"></pagination>
