@@ -16,7 +16,6 @@ export class ProductListComponent implements OnInit {
 
   selectedProductDetail(event) {
   	this.router.navigate(['/product-detail', event.id]);
-  	localStorage.setItem('selectedProduct', JSON.stringify(event));
   }
 
 }

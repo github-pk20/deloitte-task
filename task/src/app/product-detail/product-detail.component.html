@@ -1,14 +1,14 @@
 <div class="row m-5">
 	<div class="col">
-		<img [src]="selectedProductDetail.imageUrl" height="375" width= "500" class="mw-100">
+		<img [src]="selectedProductDetail[0].imageUrl" height="375" width= "500" class="mw-100">
 	</div>
 	<div class="col">
-		<h6 class="text-muted">{{selectedProductDetail.category}}</h6>
-		<h4>{{selectedProductDetail.name}}</h4>
-		<p>{{selectedProductDetail.desc}}</p>
+		<h6 class="text-muted">{{selectedProductDetail[0].category}}</h6>
+		<h4>{{selectedProductDetail[0].name}}</h4>
+		<p>{{selectedProductDetail[0].desc}}</p>
 		<h6 class="text-muted mt-5">Price per unit</h6>
 		<div class="row m-0 align-items-center">
-		  <h4>{{selectedProductDetail.price}}</h4>
+		  <h4>{{selectedProductDetail[0].price}}</h4>
 		  <button class="btn btn-dark ml-5 mr-3 rounded-0 px-4" type="submit">Buy Now</button>
 		  <button type="button" class="btn btn-light" title="Add to Cart">
 		  	<i class="fa fa-cart-arrow-down" aria-hidden="true"></i>

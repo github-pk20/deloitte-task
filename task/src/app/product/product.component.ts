@@ -10,9 +10,9 @@ import { PageChangedEvent } from 'ngx-bootstrap/pagination';
 export class ProductComponent implements OnInit {
 
   @Output() selectedProduct = new EventEmitter<any>();
-  productDetails;
-  productPerPage;
-  totalItems;
+  productDetails = [];
+  productPerPage = [];
+  totalItems = 0;
 
   constructor() { }
 

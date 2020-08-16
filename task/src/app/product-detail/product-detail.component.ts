@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { PRODUCTS } from '../product';
 
 @Component({
   selector: 'app-product-detail',
@@ -7,12 +9,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProductDetailComponent implements OnInit {
 
-  selectedProductDetail;
+  selectedProductDetail = [];
+  routeSub: any;
+  productDetails = [];
 
-  constructor() { }
+  constructor(private route: ActivatedRoute) { }
 
   ngOnInit() {
-  	this.selectedProductDetail = JSON.parse(localStorage.getItem('selectedProduct'));
+  	this.productDetails = PRODUCTS;
+  	this.routeSub = this.route.params.subscribe(params => {
+      this.selectedProductDetail = this.productDetails.filter((detail) => detail.id == params['id']);
+    });
   }
 
 }
