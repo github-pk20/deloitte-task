@@ -1,1 +1,18 @@
-<p>product works!</p>
+<div class="row">
+	<div class="col-sm-4" *ngFor="let product of productDetails" >
+		<div class="card">
+		  <div class="card-body">
+			 <img [src]="product.imageUrl" width="100%" height="273">
+			 <p>{{product.name}}</p>
+			 <div class="row justify-content-between">
+				 <p>{{product.desc}}</p>
+				 <p>{{product.price}}</p>
+			 </div>
+			 <div class="row justify-content-between">
+			 	<rating></rating>
+			 	<i class="fa fa-cart-arrow-down" aria-hidden="true"></i>
+			 </div>
+		  </div>
+		</div>
+	</div>
+</div>

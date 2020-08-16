@@ -10,6 +10,7 @@ import { ProductListComponent } from './product-list/product-list.component';
 import { FilterComponent } from './filter/filter.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AccordionModule } from 'ngx-bootstrap/accordion';
+import { RatingModule } from 'ngx-bootstrap/rating';
 import { Ng5SliderModule } from 'ng5-slider';
 
 @NgModule({
@@ -26,6 +27,7 @@ import { Ng5SliderModule } from 'ng5-slider';
     AppRoutingModule,
     BrowserAnimationsModule,
     AccordionModule.forRoot(),
+    RatingModule.forRoot(),
     Ng5SliderModule
   ],
   providers: [],
