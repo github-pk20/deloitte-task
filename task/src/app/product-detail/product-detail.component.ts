@@ -7,9 +7,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProductDetailComponent implements OnInit {
 
+  selectedProductDetail;
+
   constructor() { }
 
-  ngOnInit(): void {
+  ngOnInit() {
+  	this.selectedProductDetail = JSON.parse(localStorage.getItem('selectedProduct'));
   }
 
 }

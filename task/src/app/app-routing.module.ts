@@ -5,7 +5,7 @@ import { ProductListComponent } from './product-list/product-list.component';
 
 const appRoutes: Routes = [
   { path: 'product-list', component: ProductListComponent },
-  { path: 'product-detail', component: ProductDetailComponent },
+  { path: 'product-detail/:id', component: ProductDetailComponent },
   { path: '',   redirectTo: '/product-list', pathMatch: 'full' },
 ];
 

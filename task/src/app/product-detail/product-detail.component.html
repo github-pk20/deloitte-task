@@ -1,1 +1,16 @@
-<p>product-detail works!</p>
+<div class="row">
+	<div class="col">
+		<img [src]="selectedProductDetail.imageUrl">
+	</div>
+	<div class="col">
+		<p>{{selectedProductDetail.category}}</p>
+		<h3>{{selectedProductDetail.name}}</h3>
+		<p>{{selectedProductDetail.desc}}</p>
+		<label>Price per unit</label>
+		<div class="row">
+		  <h3>{{selectedProductDetail.price}}</h3>
+		  <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buy Now</button>
+		  <i class="fa fa-cart-arrow-down" aria-hidden="true"></i>
+		</div>
+	</div>
+</div>
